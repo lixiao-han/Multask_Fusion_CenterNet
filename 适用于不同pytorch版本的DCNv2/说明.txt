@@ -1,0 +1,2 @@
+最正宗的改编版本在https://github.com/CharlesShang/DCNv2（仅支持pytorch1.0-1.4）
+其他问题或版本皆是在该网址评论区找到
