@@ -637,7 +637,7 @@ class DLASeg(nn.Module):
             if not head == seg_name:
                 if head == 'hm':
                     attention = F.interpolate(z[seg_name], size=(128, 128), mode='bilinear', align_corners=False)
-                    yy = self.__getattr__(head)(yy_)
+                    yy = self.__getattr__(head)(y[-1])
                     yyy = torch.cat([yy, attention], 1)
                     yyy = self.last_conv(yyy)
                     z[head] = yyy
