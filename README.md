@@ -13,3 +13,8 @@ python main.py ctdet --val_intervals 5 --exp_id coco_dla_1x2.0 --dataset uadetra
 训练UA-DETRAC结果可视化：
 ![image](https://github.com/lixiao-han/Multask_Fusion_CenterNet/assets/82953938/d351bcfa-525e-4872-9853-8329195c7888)
 
+由于UA-DETRAC数据集本身存在很多被忽略（无标记）区域，多多少少会影响检测性能，因此本方法通过mask_ignore.py方法对测试集图片存在的ignore区域进行了mask，mask后的效果如下图
+![image](https://github.com/lixiao-han/Multask_Fusion_CenterNet/assets/82953938/aa5fb141-5dd5-4013-988e-48bb4232510f)
+（该脚本文件对所有视频的ignore区域都进行了标注，也可通过更改mask_ignore.py中的代码自行mask）
+
+
